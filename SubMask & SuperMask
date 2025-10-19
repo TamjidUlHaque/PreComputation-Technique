@@ -1,0 +1,38 @@
+/*Intuition :-
+    Ekhane proshner moddhe bola hoise je amake ekta n size er array dewa thakbe 
+    jar moddhe proti ta element er kun bit gula set sheita bola thakbe . Amake bolte
+    hobe je oi element gula niye duita subsequence toiri kora jabe ki na jader moddhe
+    bitwise or opeartion korle eder final result same ashbe .
+
+    Ekhane jei intuition ta use hoise ta holo amra shompurno array ta ke ekta subsequence
+    akare niye nisi . Oita diye jei res ta toiri hoise , atleast ekta element baad diye oi
+    result ana shomvob ki na ta check kortesi . Muloto Kuno ekta value emon ache ki na jeita
+    onno value gula sub-Mask hishabe kaaj kortese sheita freq count korar maddhome calculate
+    kora hoise . 
+
+    Subsequence holo ekta array er element gula ke order maintain kore jekuno idx theke value newa .
+
+    Kuno element ke jei element er sathe compare kora hocche tar moddhe jei bit gula set jodi 2nd
+    element er moddhe o sheigula set thake tobe First element holo sub-mask , second holo super-mask.
+*/
+
+
+void giveMeMyGloryBack() {
+    ll n ; cin >> n ; vll vec[n] ; map<ll,ll> mp ;
+    tamjid(n){
+        ll a ; cin >> a ; 
+        for(int j = 0 ; j < a ; j++){
+            ll x ; cin >> x ; mp[x]++ ; vec[i].pb(x) ;
+        }
+    }
+    for(auto val:vec){
+        bool flag = true ;
+        for(auto elem :val){
+            if(mp[elem]<2) flag = false ;
+        }
+        if(flag){
+            yes ; return ;
+        }
+    }
+    no ;
+}
