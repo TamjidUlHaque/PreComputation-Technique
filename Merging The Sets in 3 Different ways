@@ -1,0 +1,40 @@
+/*Intuition :-
+    Ekhane proshner moddhe bola hoise je amake N songkhok set dewa hobe . Set er moddhe
+    prottek ta value 1 theke boro othoba shoman abong m theke chuto othoba shoman. Amake bolte
+    hobe je oi N songkhok set theke kichu set niye notun ekta resultant set toiri korte
+    parbo ki na jekhane 1 theke m porjonto shobgula number e present thakbe. And oi kaaj
+    ta 3 ta vinno vinno upaye kora gele print yes . else print no .
+
+    Intuition :- Ekhane muloto prothome shobgula element er freq cnt kore rakha hoise . 
+    Set er vitore shob element ke input newa hoise . Jodi set er size m na hoy tahole 
+    Proshne chawa resultant set toiri kora jabe nah . Ekhon jodi set er size m er shoman
+    hoy tahole amader ke dekhte hobe atleast duita set emon ache ki na jara freq count
+    e kuno vumika rakhtese na . Jodi emon duita set pawa jay tahole thik 4 ta upaye 
+    proshner set ta bananu jabe . LazySetCnt >= 2 hole yes , else no .
+*/
+
+void giveMeMyGloryBack() {
+    ll n , m ; cin >> n >> m ; map<ll,ll> mp ; set<ll> ms ;
+    vector<vector<ll>> store(n) ;
+    for(int j = 0 ; j < n ; j++){
+        ll x ; cin >> x ; 
+        tamjid(x){
+            ll a ; cin >> a ; mp[a]++ ; store[j].pb(a) ; ms.insert(a) ;
+        }
+    }
+    int cnt = 0 ;
+    for(auto val:store){
+        bool check = true ;
+        for(auto x:val){
+            if(mp[x]<2){
+                check = false ; break ;
+            }
+        }
+        if(check) cnt++ ;
+    }
+    if(len(ms)<m) no ;
+    else{
+        if(cnt>=2) yes ;
+        else no ;
+    }
+}
